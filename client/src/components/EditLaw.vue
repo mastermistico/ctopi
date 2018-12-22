@@ -45,11 +45,11 @@ export default {
       const response = await PostsService.getLaw({
         id: this.$route.params.id
       })
-        this.Nombre = this.response.Nombre
-        this.Entidad = this.response.Entidad
-        this.Ciudad = this.response.Ciudad
-        this.Codigo = this.response.Codigo
-        this.Usuario = this.response.Usuario
+        this.Nombre = response.data.Nombre
+        this.Entidad = response.data.Entidad
+        this.Ciudad = response.data.Ciudad
+        this.Codigo = response.data.Codigo
+        this.Usuario = response.data.Usuario
     },
     async updateLaw () {
       await PostsService.updateLaw({
